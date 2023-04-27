@@ -20,6 +20,9 @@ env:
 jobs:
   deploy_job:
     runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
     environment: deploy
 
     steps:
