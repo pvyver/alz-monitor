@@ -1,13 +1,7 @@
 
 name: Deploy ALZ Monitor policies
 
-# only trigger on pull request closed events
-on:
-  workflow_dispatch: {}
-
-permissions:
-      id-token: write
-      contents: read
+on: [workflow_dispatch]
 
 env:
   Location: "westeurope"
@@ -23,7 +17,6 @@ jobs:
     permissions:
       id-token: write
       contents: read
-    environment: deploy
 
     steps:
     - name: Checkout Repo
